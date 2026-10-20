@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NutriBot — AI Nutrigenomic Health Adviser</title>
+<meta name="description" content="Talk to NutriBot, your AI nutrigenomics adviser. Get personalized nutrition and health guidance based on your lifestyle and DNA — anytime, anywhere.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="34" height="34">
+          <path d="M10 4 C10 14, 30 14, 30 24 C30 34, 10 34, 10 36" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M30 4 C30 14, 10 14, 10 24 C10 34, 30 34, 30 36" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.4"/>
+          <line x1="12" y1="9" x2="28" y2="9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="13" y1="20" x2="27" y2="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+          <line x1="12" y1="31" x2="28" y2="31" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="logo-text">NutriBot</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="pricing_1.html">Pricing</a>
+      <a href="x5-pro.html">X5-Pro</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="#chatbot" class="btn btn-primary nav-cta">Talk to NutriBot</a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Nutrigenomic AI · Available 24/7</p>
+      <h1>Your nutrition, <br>read from your genes.</h1>
+      <p class="hero-sub">NutriBot is an AI health adviser that turns your lifestyle, habits, and DNA into nutrition guidance you can actually use — no appointment required.</p>
+      <div class="hero-actions">
+        <a href="#chatbot" class="btn btn-primary">Start chatting now</a>
+        <a href="about.html" class="btn btn-ghost">How it works</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 320 420" width="100%" class="helix">
+        <path d="M60 10 C60 110, 260 110, 260 210 C260 310, 60 310, 60 410" stroke="#7FA88C" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M260 10 C260 110, 60 110, 60 210 C60 310, 260 310, 260 410" stroke="#E8896A" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.85"/>
+        <g stroke="#1B3B2E" stroke-width="3" stroke-linecap="round" opacity="0.35">
+          <line x1="68" y1="40" x2="252" y2="40"/>
+          <line x1="100" y1="85" x2="220" y2="85"/>
+          <line x1="160" y1="120" x2="160" y2="120"/>
+          <line x1="100" y1="175" x2="220" y2="175"/>
+          <line x1="68" y1="215" x2="252" y2="215"/>
+          <line x1="100" y1="255" x2="220" y2="255"/>
+          <line x1="100" y1="345" x2="220" y2="345"/>
+          <line x1="68" y1="390" x2="252" y2="390"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT SNAPSHOT ===== -->
+<section class="section">
+  <div class="container intro-block">
+    <h2>What NutriBot does</h2>
+    <p class="lead">NutriBot analyzes the information you share — your health history, daily habits, and DNA data, if you have it — to give you personalized nutrition and wellness advice. Ask about your diet, a health concern, or how to eat for your goals, and get guidance grounded in nutrigenomic science, any time of day or night.</p>
+  </div>
+</section>
+
+<!-- ===== CHATBOT EMBED ===== -->
+<section class="section chatbot-section" id="chatbot">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Try it now</p>
+      <h2>Chat with NutriBot</h2>
+      <p class="lead">Ask a question about your diet, symptoms, or health goals below. NutriBot responds in real time.</p>
+    </div>
+
+    <div class="chatbot-frame-wrap">
+      <iframe
+        src="https://dennis-the-robot-bf5y8vwm4a6nb7jfymyh9x.streamlit.app/?embed=true"
+        title="NutriBot AI Chat"
+        loading="lazy"
+        allow="clipboard-write"
+        class="chatbot-frame">
+      </iframe>
+    </div>
+
+    <p class="chatbot-fallback">
+      Chat not loading? <a href="https://dennis-the-robot-bf5y8vwm4a6nb7jfymyh9x.streamlit.app/" target="_blank" rel="noopener">Open NutriBot in a new tab →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Our services</p>
+      <h2>Three ways NutriBot supports your health</h2>
+    </div>
+
+    <div class="card-grid">
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="32"><path d="M8 36V12a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H18l-8 8z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><line x1="16" y1="16" x2="32" y2="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="16" y1="23" x2="28" y2="23" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Chatbot consultations</h3>
+        <p>Talk through nutrition and health questions with NutriBot any time. Get clear, personalized advice based on what you tell it about your lifestyle and goals.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="32"><path d="M16 6 C16 16, 32 16, 32 26 C32 36, 16 36, 16 42" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M32 6 C32 16, 16 16, 16 26 C16 36, 32 36, 32 42" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5"/></svg>
+        </div>
+        <h3>DNA-informed analysis</h3>
+        <p>If you have DNA test results, share the relevant details with NutriBot to get nutrition guidance tailored to your genetic profile.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="32"><circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M24 14v10l7 5" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Traditional Chinese Medicine perspectives</h3>
+        <p>Explore wellness questions through a TCM lens alongside modern nutrigenomic insight, for a more rounded view of your health.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Why NutriBot</p>
+      <h2>Built for everyday health decisions</h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>Powered by AI, refined continuously</h3>
+        <p>NutriBot runs on a large language model, tuned with ongoing prompt engineering and conversation review so its guidance stays current and relevant.</p>
+      </div>
+      <div class="feature">
+        <h3>An AI-first team</h3>
+        <p>Our small human team focuses on strategy and partnerships, while specialized AI assistants support day-to-day operations — keeping NutriBot responsive and efficient.</p>
+      </div>
+      <div class="feature">
+        <h3>Open to partnerships</h3>
+        <p>We're looking for partners who share an interest in health, nutrition, and AI. If you have an idea for collaboration or advertising, we'd like to hear it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWS PREVIEW ===== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">From the blog</p>
+      <h2>Recent articles</h2>
+    </div>
+
+    <div class="news-grid">
+      <a class="news-card" href="blog.html">
+        <div class="news-thumb" style="background-color:#cfe3d6"></div>
+        <div class="news-body">
+          <span class="news-date">June 2025</span>
+          <h3>Ainutribot: Empowering the Next Generation</h3>
+        </div>
+      </a>
+      <a class="news-card" href="blog.html">
+        <div class="news-thumb" style="background-color:#e8d9c5"></div>
+        <div class="news-body">
+          <span class="news-date">November 2024</span>
+          <h3>Nutrition for Body: Understanding the Power of a Healthy Diet</h3>
+        </div>
+      </a>
+      <a class="news-card" href="blog.html">
+        <div class="news-thumb" style="background-color:#dfe7d0"></div>
+        <div class="news-body">
+          <span class="news-date">October 2024</span>
+          <h3>Nutrigenomics, Explained</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="news-more">
+      <a href="blog.html" class="btn btn-ghost">View all articles →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-band">
+  <div class="container cta-inner">
+    <h2>Have a question about your health?</h2>
+    <p>NutriBot is ready whenever you are — no waiting room, no appointment.</p>
+    <a href="#chatbot" class="btn btn-primary">Chat with NutriBot</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">NutriBot</span>
+      <p>AI-powered nutrigenomic guidance for everyday health.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="pricing_1.html">Pricing</a>
+      <a href="x5-pro.html">X5-Pro</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 NutriBot. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

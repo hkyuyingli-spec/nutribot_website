@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — NutriBot</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta name="description" content="Simple, transparent pricing tiers for X5-Pro. From solo developers to large scale enterprises.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .pricing-hero { text-align: center; padding: 56px 0 40px; }
+  
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+  }
+  
+  .pricing-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 36px 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(27,59,46,0.10);
+  }
+  
+  .pricing-card.popular {
+    border-color: var(--coral);
+    box-shadow: 0 12px 32px rgba(232,137,106,0.12);
+  }
+  
+  .popular-badge {
+    position: absolute;
+    top: -14px;
+    left: 30px;
+    background: var(--coral);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 99px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .plan-name {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--forest);
+    margin-bottom: 8px;
+  }
+  
+  .plan-description {
+    font-size: 0.9rem;
+    color: #6b6b66;
+    margin-bottom: 24px;
+    min-height: 48px;
+  }
+  
+  .plan-price {
+    font-size: 2.5rem;
+    font-family: var(--font-display);
+    color: var(--forest);
+    font-weight: 700;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+  
+  .plan-price span {
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    color: #6b6b66;
+    font-weight: 400;
+  }
+  
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+  }
+  
+  .plan-features li {
+    font-size: 0.92rem;
+    color: #4a4a47;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  
+  .check-icon {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    color: var(--coral);
+  }
+  
+  .pricing-card.popular .check-icon {
+    color: var(--coral);
+  }
+  
+  .table-section {
+    padding: 64px 0;
+    overflow-x: auto;
+  }
+  
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    font-size: 0.92rem;
+    text-align: left;
+    min-width: 700px;
+  }
+  
+  .compare-table th, .compare-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--line);
+  }
+  
+  .compare-table th {
+    font-family: var(--font-display);
+    color: var(--forest);
+    font-weight: 600;
+  }
+  
+  .compare-table tr:hover td {
+    background: rgba(27,59,46,0.02);
+  }
+  
+  .check-val {
+    color: var(--coral);
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+  }
+  
+  .dash-val {
+    color: #9a9a91;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  /* Grid layout modifications for the 5 cards */
+  .pricing-row-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 28px;
+  }
+  
+  .pricing-row-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 900px) {
+    .pricing-row-top, .pricing-row-bottom {
+      grid-template-columns: 1fr;
+      max-width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="34" height="34">
+          <path d="M10 4 C10 14, 30 14, 30 24 C30 34, 10 34, 10 36" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M30 4 C30 14, 10 14, 10 24 C10 34, 30 34, 30 36" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.4"/>
+          <line x1="12" y1="9" x2="28" y2="9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="13" y1="20" x2="27" y2="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+          <line x1="12" y1="31" x2="28" y2="31" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="logo-text">NutriBot</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="pricing_1.html" class="active">Pricing</a>
+      <a href="x5-pro.html">X5-Pro</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="index.html#chatbot" class="btn btn-primary nav-cta">Talk to NutriBot</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="pricing-hero">
+  <div class="container">
+    <p class="eyebrow">X5-Pro Pricing Plans</p>
+    <h1>The cognitive engine that supercharges your AI agents</h1>
+    <p class="hero-sub" style="margin: 0 auto;">Choose the plan that fits your team. All prices in USD, billed monthly.</p>
+  </div>
+</section>
+
+<!-- PRICING TIERS -->
+<section class="section">
+  <div class="container">
+    
+    <!-- Top 3 plans -->
+    <div class="pricing-row-top">
+      
+      <!-- Lite Plan -->
+      <div class="pricing-card">
+        <h3 class="plan-name">X5-Lite</h3>
+        <p class="plan-description">Perfect for developers exploring the X5 cognitive architecture.</p>
+        <div class="plan-price">Free</div>
+        <ul class="plan-features">
+          <li><span class="check-icon">✓</span> Core X5-Lite engine</li>
+          <li><span class="check-icon">✓</span> Basic coherence scoring</li>
+          <li><span class="check-icon">✓</span> Simple Lo Shu cycle</li>
+          <li><span class="check-icon">✓</span> Single-agent enhancement</li>
+          <li><span class="check-icon">✓</span> Community support</li>
+        </ul>
+        <a href="https://github.com" class="btn btn-ghost" target="_blank">Try X5-Lite on GitHub</a>
+      </div>
+
+      <!-- Developer Plan -->
+      <div class="pricing-card">
+        <h3 class="plan-name">X5-Pro Developer</h3>
+        <p class="plan-description">For individual developers who want full cognitive power.</p>
+        <div class="plan-price">$29<span>/ mo</span></div>
+        <ul class="plan-features">
+          <li><span class="check-icon">✓</span> Full 81-state Oracle Engine</li>
+          <li><span class="check-icon">✓</span> 3D Coherence Geometry</li>
+          <li><span class="check-icon">✓</span> Dynamic Lo Shu modulation</li>
+          <li><span class="check-icon">✓</span> Personality engine</li>
+          <li><span class="check-icon">✓</span> Single-agent cognition</li>
+          <li><span class="check-icon">✓</span> Local development license</li>
+          <li><span class="check-icon">✓</span> Email support</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Buy License Key</a>
+      </div>
+
+      <!-- Commercial Plan -->
+      <div class="pricing-card popular">
+        <div class="popular-badge">Popular</div>
+        <h3 class="plan-name">X5-Pro Commercial</h3>
+        <p class="plan-description">For startups and companies building commercial AI agents.</p>
+        <div class="plan-price">$99<span>/ mo per project</span></div>
+        <ul class="plan-features">
+          <li><span class="check-icon">✓</span> Commercial usage rights</li>
+          <li><span class="check-icon">✓</span> Multi-agent cognition</li>
+          <li><span class="check-icon">✓</span> Shared oracle state across agents</li>
+          <li><span class="check-icon">✓</span> Token-efficiency optimization</li>
+          <li><span class="check-icon">✓</span> GPU-cost reduction features</li>
+          <li><span class="check-icon">✓</span> Priority email support</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Buy License Key</a>
+      </div>
+      
+    </div>
+
+    <!-- Bottom 2 plans -->
+    <div class="pricing-row-bottom">
+      
+      <!-- Team Plan -->
+      <div class="pricing-card">
+        <h3 class="plan-name">X5-Pro Team</h3>
+        <p class="plan-description">For teams building multiple agent systems at scale.</p>
+        <div class="plan-price">$299<span>/ mo</span></div>
+        <ul class="plan-features">
+          <li><span class="check-icon">✓</span> Up to 10 developers</li>
+          <li><span class="check-icon">✓</span> Unlimited projects</li>
+          <li><span class="check-icon">✓</span> Slack/Discord support</li>
+          <li><span class="check-icon">✓</span> Early access to new features</li>
+          <li><span class="check-icon">✓</span> Custom personality modules</li>
+          <li><span class="check-icon">✓</span> Priority bug fixes</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Get License Key</a>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="pricing-card">
+        <h3 class="plan-name">X5-Enterprise</h3>
+        <p class="plan-description">For organizations deploying large-scale, mission-critical systems.</p>
+        <div class="plan-price">$2,000+<span>/ mo</span></div>
+        <ul class="plan-features">
+          <li><span class="check-icon">✓</span> Unlimited developers & projects</li>
+          <li><span class="check-icon">✓</span> On-premise deployment</li>
+          <li><span class="check-icon">✓</span> Custom oracle & coherence design</li>
+          <li><span class="check-icon">✓</span> Dedicated support engineer</li>
+          <li><span class="check-icon">✓</span> SLA & Uptime guarantees</li>
+          <li><span class="check-icon">✓</span> GPU-cost optimization consulting</li>
+        </ul>
+        <a href="contact.html" class="btn btn-ghost">Contact Sales</a>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="section section-alt table-section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Plan Comparison</p>
+      <h2>Compare X5-Pro Plans in Detail</h2>
+    </div>
+    
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Lite (Free)</th>
+          <th>Pro Dev ($29)</th>
+          <th>Pro Commercial ($99)</th>
+          <th>Pro Team ($299)</th>
+          <th>Enterprise ($2,000+)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Oracle Engine</strong></td>
+          <td>Basic</td>
+          <td>81-state</td>
+          <td>81-state</td>
+          <td>81-state</td>
+          <td>Custom</td>
+        </tr>
+        <tr>
+          <td><strong>Coherence Geometry</strong></td>
+          <td>1D</td>
+          <td>3D</td>
+          <td>3D</td>
+          <td>3D</td>
+          <td>Custom</td>
+        </tr>
+        <tr>
+          <td><strong>LoShu Modulation</strong></td>
+          <td>Basic</td>
+          <td>Dynamic</td>
+          <td>Dynamic</td>
+          <td>Dynamic</td>
+          <td>Custom</td>
+        </tr>
+        <tr>
+          <td><strong>Personality Engine</strong></td>
+          <td><span class="dash-val">–</span></td>
+          <td><span class="check-val">✓</span> Yes</td>
+          <td><span class="check-val">✓</span> Yes</td>
+          <td><span class="check-val">✓</span> Yes</td>
+          <td>Custom</td>
+        </tr>
+        <tr>
+          <td><strong>Multi-Agent Cognition</strong></td>
+          <td><span class="dash-val">–</span></td>
+          <td><span class="dash-val">–</span></td>
+          <td><span class="check-val">✓</span> Yes</td>
+          <td><span class="check-val">✓</span> Yes</td>
+          <td>Advanced</td>
+        </tr>
+        <tr>
+          <td><strong>Commercial Rights</strong></td>
+          <td><span class="dash-val">–</span></td>
+          <td><span class="dash-val">–</span></td>
+          <td><span class="check-val">✓</span> Yes</td>
+          <td><span class="check-val">✓</span> Yes</td>
+          <td><span class="check-val">✓</span> Yes</td>
+        </tr>
+        <tr>
+          <td><strong>Support</strong></td>
+          <td>Community</td>
+          <td>Email</td>
+          <td>Priority Email</td>
+          <td>Slack/Discord</td>
+          <td>Dedicated Engineer</td>
+        </tr>
+        <tr>
+          <td><strong>Deployment</strong></td>
+          <td>Local</td>
+          <td>Local</td>
+          <td>Local</td>
+          <td>Local</td>
+          <td>On-Premise</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- WHY UPGRADE -->
+<section class="section">
+  <div class="container intro-block">
+    <h2>Why upgrade to X5-Pro?</h2>
+    <p class="lead">X5-Pro unlocks the full potential of deterministic cognitive controllers for LLM agents. By moving from X5-Lite to X5-Pro, you get access to advanced error correction, long-horizon reasoning stability, and professional-grade multi-turn execution modules designed to optimize token efficiency and prevent agent drift.</p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-band">
+  <div class="container cta-inner">
+    <h2>Ready to build stable cognitive agents?</h2>
+    <p>Get started with X5-Pro today and experience absolute determinism in reasoning.</p>
+    <a href="contact.html" class="btn btn-primary">Purchase License Key</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">NutriBot</span>
+      <p>AI-powered nutrigenomic guidance for everyday health.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="pricing_1.html">Pricing</a>
+      <a href="x5-pro.html">X5-Pro</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 NutriBot. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

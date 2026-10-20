@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X5-Pro — Deterministic Cognitive Controller | NutriBot</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta name="description" content="X5-Pro is a deterministic cognitive controller for LLM agents — stable long-horizon reasoning and predictable agent behavior, built on the Lo Shu 3×3 cognitive cycle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .x5-hero{ text-align:center; }
+  .x5-hero .hero-actions{ justify-content:center; }
+  .x5-tag{
+    font-size: 1.05rem; font-weight:600; color: var(--forest);
+    max-width: 640px; margin: 0.6em auto 0;
+  }
+  .cap-grid{
+    display:grid; grid-template-columns: repeat(5, 1fr); gap:1px;
+    background: var(--line); border:1px solid var(--line);
+    border-radius: var(--radius); overflow:hidden; margin-top: 28px;
+  }
+  .cap-item{
+    background:#fff; padding: 20px 14px; text-align:center;
+    font-size: 0.88rem; font-weight:600; color: var(--forest);
+  }
+  .grid-coord{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem; color: var(--coral); font-weight:600;
+    margin-bottom: 10px; display:block;
+  }
+  .compare-grid{
+    display:grid; grid-template-columns: 1fr 1fr; gap:20px;
+    margin-top: 8px;
+  }
+  .compare-col{
+    background:#fff; border:1px solid var(--line); border-radius: var(--radius);
+    padding: 28px 26px;
+  }
+  .compare-col.pro{ border-color: var(--coral); box-shadow: 0 12px 32px rgba(232,137,106,0.12); }
+  .compare-col h3{ margin-bottom: 4px; }
+  .compare-col .tagline{ color:#6b6b66; font-size:0.88rem; margin-bottom: 18px; }
+  .compare-col ul{ list-style:none; padding:0; margin:0; }
+  .compare-col li{
+    padding: 8px 0; border-bottom: 1px solid var(--line);
+    font-size: 0.92rem; color:#4a4a47; display:flex; gap:8px; align-items:flex-start;
+  }
+  .compare-col li:last-child{ border-bottom:none; }
+  .mark{ font-family:'IBM Plex Mono', monospace; font-size:0.85rem; flex-shrink:0; }
+  .lite .mark{ color:#9a9a91; }
+  .pro .mark{ color: var(--coral); }
+  @media (max-width: 900px){
+    .cap-grid{ grid-template-columns: repeat(2,1fr); }
+    .compare-grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="34" height="34">
+          <path d="M10 4 C10 14, 30 14, 30 24 C30 34, 10 34, 10 36" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M30 4 C30 14, 10 14, 10 24 C10 34, 30 34, 30 36" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.4"/>
+          <line x1="12" y1="9" x2="28" y2="9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="13" y1="20" x2="27" y2="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+          <line x1="12" y1="31" x2="28" y2="31" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="logo-text">NutriBot</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="pricing_1.html">Pricing</a>
+      <a href="x5-pro.html" class="active">X5-Pro</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="pricing_1.html" class="btn btn-primary nav-cta">See Pricing</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero x5-hero">
+  <div class="container">
+    <p class="eyebrow">Deterministic Cognitive Controller</p>
+    <h1>Stable long-horizon reasoning for LLM agents</h1>
+    <p class="hero-sub" style="margin:0 auto;">X5-Pro is the fully-enhanced, commercial version of the Lo Shu 3×3 cognitive cycle that powers NutriBot's own agents — predictable behavior, on every step, at every scale.</p>
+    <p class="x5-tag">Build agents that don't drift, hallucinate, or lose structure.</p>
+    <div class="hero-actions">
+      <a href="pricing_1.html" class="btn btn-primary">See X5-Pro Pricing</a>
+      <a href="#lite" class="btn btn-ghost">Try X5-Lite on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM / CAPABILITIES -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">The Problem</p>
+      <h2>LLM agents fail because their reasoning loops are unstable</h2>
+      <p class="lead">X5-Pro fixes this with a deterministic cognitive controller, purpose-built for:</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap-item">Multi-step reasoning</div>
+      <div class="cap-item">Tool-use pipelines</div>
+      <div class="cap-item">Autonomous agents</div>
+      <div class="cap-item">RL-adjacent hybrid systems</div>
+      <div class="cap-item">Long-horizon decision loops</div>
+    </div>
+    <div class="intro-block" style="margin-top:28px;">
+      <p class="lead">X5-Pro is the commercial, fully-enhanced version of X5-Lite — with advanced stability, error-correction, and deterministic sequencing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY X5-PRO -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Why X5-Pro</p>
+      <h2>Six modules, one deterministic core</h2>
+      <p class="lead">Each module is addressed by its position in the 3×3 controller matrix.</p>
+    </div>
+    <div class="card-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="card">
+        <span class="grid-coord">[0,0]</span>
+        <h3>Deterministic Reasoning Loop</h3>
+        <p>A fully-optimized Lo Shu 3×3 cycle with enhanced transitions, internal state tracking, and stability heuristics.</p>
+      </div>
+      <div class="card">
+        <span class="grid-coord">[0,1]</span>
+        <h3>Long-Horizon Stability</h3>
+        <p>Agents maintain consistent behavior across dozens or hundreds of steps — without drift or collapse.</p>
+      </div>
+      <div class="card">
+        <span class="grid-coord">[0,2]</span>
+        <h3>Error-Correction Engine</h3>
+        <p>Automatic detection and correction of reasoning faults, hallucination loops, and invalid tool-use proposals.</p>
+      </div>
+      <div class="card">
+        <span class="grid-coord">[1,0]</span>
+        <h3>Predictable Multi-Turn Execution</h3>
+        <p>Every step is controlled, logged, and reproducible — ideal for enterprise workflows and agent orchestration.</p>
+      </div>
+      <div class="card">
+        <span class="grid-coord">[1,1]</span>
+        <h3>Pro-Level Cognitive Modules</h3>
+        <p>Additional layers for planning, evaluation, correction, and deterministic output generation.</p>
+      </div>
+      <div class="card">
+        <span class="grid-coord">[1,2]</span>
+        <h3>Enterprise-Ready Architecture</h3>
+        <p>Designed for production agents, automation systems, and hybrid RL + LLM pipelines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LITE VS PRO -->
+<section class="section section-alt" id="lite">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Lite → Pro</p>
+      <h2>Start free. Upgrade when it matters.</h2>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-col lite">
+        <h3>X5-Lite</h3>
+        <p class="tagline">Free · Open-source</p>
+        <ul>
+          <li><span class="mark">–</span>Minimal deterministic loop</li>
+          <li><span class="mark">–</span>Basic Lo Shu 3×3 cycle</li>
+          <li><span class="mark">–</span>Good for experimentation</li>
+          <li><span class="mark">–</span>Good for research</li>
+          <li><span class="mark">–</span>Good for agent prototypes</li>
+        </ul>
+        <div style="margin-top:20px;">
+          <a href="#" class="btn btn-ghost">Try X5-Lite on GitHub</a>
+        </div>
+      </div>
+      <div class="compare-col pro">
+        <h3>X5-Pro</h3>
+        <p class="tagline">Paid · License key</p>
+        <ul>
+          <li><span class="mark">✓</span>Full deterministic controller</li>
+          <li><span class="mark">✓</span>Enhanced cognitive transitions</li>
+          <li><span class="mark">✓</span>Error-correction engine</li>
+          <li><span class="mark">✓</span>Stability heuristics</li>
+          <li><span class="mark">✓</span>Multi-turn reproducibility</li>
+          <li><span class="mark">✓</span>Production-grade architecture</li>
+          <li><span class="mark">✓</span>License key + updates</li>
+          <li><span class="mark">✓</span>Priority support</li>
+        </ul>
+        <div style="margin-top:20px;">
+          <a href="pricing_1.html" class="btn btn-primary">See Pricing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-band">
+  <div class="container cta-inner">
+    <h2>If you liked X5-Lite, X5-Pro is the real engine.</h2>
+    <p>Full pricing tiers, from solo developer to enterprise.</p>
+    <a href="pricing_1.html" class="btn btn-primary">See X5-Pro Pricing</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">NutriBot</span>
+      <p>AI-powered nutrigenomic guidance for everyday health.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="pricing_1.html">Pricing</a>
+      <a href="x5-pro.html">X5-Pro</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 NutriBot. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
