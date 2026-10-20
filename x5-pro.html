@@ -23,7 +23,7 @@
     border-radius: var(--radius); overflow:hidden; margin-top: 28px;
   }
   .cap-item{
-    background:#fff; padding: 20px 14px; text-align:center;
+    background:#1A202C; padding: 20px 14px; text-align:center;
     font-size: 0.88rem; font-weight:600; color: var(--forest);
   }
   .grid-coord{
@@ -36,16 +36,16 @@
     margin-top: 8px;
   }
   .compare-col{
-    background:#fff; border:1px solid var(--line); border-radius: var(--radius);
+    background:#1A202C; border:1px solid var(--line); border-radius: var(--radius);
     padding: 28px 26px;
   }
-  .compare-col.pro{ border-color: var(--coral); box-shadow: 0 12px 32px rgba(232,137,106,0.12); }
+  .compare-col.pro{ border-color: var(--coral); box-shadow: 0 12px 32px rgba(255,140,66,0.16); }
   .compare-col h3{ margin-bottom: 4px; }
-  .compare-col .tagline{ color:#6b6b66; font-size:0.88rem; margin-bottom: 18px; }
+  .compare-col .tagline{ color:#AAB4C3; font-size:0.88rem; margin-bottom: 18px; }
   .compare-col ul{ list-style:none; padding:0; margin:0; }
   .compare-col li{
     padding: 8px 0; border-bottom: 1px solid var(--line);
-    font-size: 0.92rem; color:#4a4a47; display:flex; gap:8px; align-items:flex-start;
+    font-size: 0.92rem; color:#CBD5E1; display:flex; gap:8px; align-items:flex-start;
   }
   .compare-col li:last-child{ border-bottom:none; }
   .mark{ font-family:'IBM Plex Mono', monospace; font-size:0.85rem; flex-shrink:0; }
@@ -62,15 +62,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo">
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="34" height="34">
-          <path d="M10 4 C10 14, 30 14, 30 24 C30 34, 10 34, 10 36" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M30 4 C30 14, 10 14, 10 24 C10 34, 30 34, 30 36" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.4"/>
-          <line x1="12" y1="9" x2="28" y2="9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="13" y1="20" x2="27" y2="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
-          <line x1="12" y1="31" x2="28" y2="31" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </span>
+      <img class="logo-mark" src="assets/logo.png" alt="" width="34" height="34">
       <span class="logo-text">NutriBot</span>
     </a>
     <nav class="main-nav" aria-label="Primary">
