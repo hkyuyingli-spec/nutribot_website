@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Android App Privacy Policy — NutriBot</title>
+<meta name="description" content="NutriBot Android App Privacy Policy for Google Play submission. Plain language explanation of data flow, device storage, retention, deletion, and health disclaimer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.policy-body {
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.policy-body h2 {
+  margin-top: 2.2em;
+  margin-bottom: 0.5em;
+  color: #fff;
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.35em;
+}
+.policy-body h3 {
+  margin-top: 1.3em;
+  margin-bottom: 0.4em;
+  color: #E2E8F0;
+  font-size: 1.1rem;
+}
+.policy-body p, .policy-body li {
+  color: #CBD5E1;
+  font-size: 0.98rem;
+}
+.policy-body ul, .policy-body ol {
+  margin: 0.6em 0 1.2em;
+  padding-left: 1.4em;
+}
+.policy-body li + li {
+  margin-top: 0.5em;
+}
+.policy-body a {
+  color: var(--coral);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.policy-body a:hover {
+  color: #fff;
+}
+.policy-body code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #E2E8F0;
+  font-family: monospace;
+}
+.policy-card {
+  background: #141A23;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 24px 0 32px;
+}
+.policy-card h3 {
+  margin-top: 0;
+  color: var(--coral);
+  font-size: 1.15rem;
+}
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.92rem;
+}
+.summary-table th, .summary-table td {
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+.summary-table th {
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-weight: 600;
+}
+.summary-table td {
+  color: #CBD5E1;
+}
+.flow-diagram {
+  background: #141A23;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 20px 0;
+}
+.flow-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.flow-step:last-child {
+  margin-bottom: 0;
+}
+.step-num {
+  background: var(--coral);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.step-content strong {
+  color: #fff;
+}
+.alert-box {
+  background: rgba(255, 140, 66, 0.08);
+  border-left: 4px solid var(--coral);
+  padding: 16px 20px;
+  border-radius: 4px 8px 8px 4px;
+  margin: 20px 0;
+}
+.alert-box p {
+  margin: 0;
+  color: #E2E8F0;
+}
+.meta-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: #CBD5E1;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img class="logo-mark" src="assets/logo.png" alt="NutriBot Logo" width="34" height="34">
+      <span class="logo-text">NutriBot</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="pricing_1.html">Pricing</a>
+      <a href="x5-pro.html">X5-Pro</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="https://ainutribot.streamlit.app" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Talk to NutriBot</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Google Play & Mobile App</p>
+    <h1>Android App Privacy Policy</h1>
+    <div style="margin-top: 14px;">
+      <span class="meta-badge">Application: NutriBot</span>
+      <span class="meta-badge">Package: <code>com.dennisrobot.nutribot</code></span>
+      <span class="meta-badge">Last Updated: November 7, 2026</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container policy-body">
+
+    <div class="policy-card">
+      <h3>At a Glance — Our Privacy Commitments</h3>
+      <p style="margin-bottom: 12px; color: #E2E8F0;">
+        We believe privacy policies should be straightforward and understandable by everyday users, not just legal teams. Here is the short version of how NutriBot handles your information:
+      </p>
+      <table class="summary-table">
+        <tbody>
+          <tr>
+            <th style="width: 35%;">User Account Required?</th>
+            <td><strong>No.</strong> You do not need to register, sign in, or provide an email, phone number, or password.</td>
+          </tr>
+          <tr>
+            <th>Personal Identification?</th>
+            <td><strong>None collected.</strong> We never ask for your real name, address, or government identity numbers.</td>
+          </tr>
+          <tr>
+            <th>Device Permissions?</th>
+            <td><strong>Internet access only (<code>android.permission.INTERNET</code>).</strong> No access to location, camera, microphone, photo gallery, or contacts.</td>
+          </tr>
+          <tr>
+            <th>Chat History Storage?</th>
+            <td><strong>Stored locally on your device</strong> in the app's private sandbox storage. The Android backend server does not maintain a database of your chat transcripts.</td>
+          </tr>
+          <tr>
+            <th>AI Processing?</th>
+            <td>Queries are sent over encrypted HTTPS to our backend server in Jakarta (IDCloudHost) and forwarded to Groq (US) to generate responses.</td>
+          </tr>
+          <tr>
+            <th>Advertising or Selling Data?</th>
+            <td><strong>Never.</strong> We do not display ads, do not use ad-tracking SDKs, and never sell your data to brokers or third parties.</td>
+          </tr>
+          <tr>
+            <th>How to Delete Data?</th>
+            <td>Clear the app storage in your Android device settings or uninstall the app. Your local chat history is erased immediately.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>1. What NutriBot Does</h2>
+    <p>
+      <strong>NutriBot</strong> is an educational wellness companion designed to share knowledge about Traditional Chinese Medicine (TCM), herbal wisdom, seasonal foods, acupressure points, and general health habits.
+    </p>
+    <p>
+      NutriBot helps you explore time-tested wellness philosophies and nutritional insights in conversational form. It is created purely for educational and self-care exploration.
+    </p>
+
+    <div class="alert-box">
+      <p>
+        <strong>Important Disclaimer:</strong> NutriBot provides educational information only. It is <em>not</em> a medical device, diagnostic system, or healthcare provider. It does not provide medical diagnoses, treatment, or clinical recommendations. Always consult a licensed physician or healthcare professional before making health, dietary, or herbal decisions.
+      </p>
+    </div>
+
+    <h2>2. What Information We Collect (and What We Do Not)</h2>
+    
+    <h3>Information you provide voluntarily</h3>
+    <ul>
+      <li><strong>Chat Messages:</strong> When you converse with NutriBot, you enter text describing wellness topics, lifestyle habits, or wellness questions.</li>
+      <li><strong>Please avoid sensitive personal identifiers:</strong> Because NutriBot does not need to know your real identity, please do <em>not</em> include your full name, home address, phone number, national ID, or financial information in your chat messages.</li>
+    </ul>
+
+    <h3>Information stored locally on your Android device</h3>
+    <ul>
+      <li><strong>Conversation History & Preferences:</strong> Your recent chat messages and language preference (English, Chinese, or Indonesian) are stored locally in the app's internal WebView storage on your Android device. This allows you to view past questions and answers within your app.</li>
+      <li>This storage remains entirely on your physical device. It is not synced to our servers and is protected by Android's application sandbox security.</li>
+    </ul>
+
+    <h3>What we DO NOT collect</h3>
+    <ul>
+      <li>We do <strong>not</strong> require you to register, sign up, or link an email, social media, or phone account.</li>
+      <li>We do <strong>not</strong> collect GPS location, contacts, address book, calendar, photos, or media files.</li>
+      <li>We do <strong>not</strong> record your voice or access your microphone or camera.</li>
+      <li>We do <strong>not</strong> collect hardware identifiers (such as IMEI or MAC address) or build behavioral tracking profiles.</li>
+    </ul>
+
+    <h2>3. Android Device Permissions</h2>
+    <p>
+      In compliance with Google Play's Minimum Permissions Policy, NutriBot requests only the absolute minimum permission required to function:
+    </p>
+    <ul>
+      <li>
+        <code>android.permission.INTERNET</code>: Enables the app to communicate securely with our backend API over HTTPS to retrieve answers to your questions.
+      </li>
+    </ul>
+    <p>
+      NutriBot does <strong>not</strong> request runtime permissions for camera, microphone, coarse or fine location, external storage, contacts, or phone state.
+    </p>
+
+    <h2>4. Honest Data Flow: Exactly What Happens When You Send a Message</h2>
+    <p>
+      We believe in complete transparency about how your data travels from your screen to the AI and back. Here is the exact technical path of every message you send:
+    </p>
+
+    <div class="flow-diagram">
+      <div class="flow-step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>You type a message and press "Send" in the Android app</strong><br>
+          Your question (and the immediate conversation context from your current session) is packaged inside the app on your Android phone.
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Encrypted Transmission via HTTPS</strong><br>
+          Your message is sent over an encrypted TLS/HTTPS connection directly to the NutriBot backend server.
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>NutriBot Backend Processing (IDCloudHost — Jakarta, Indonesia)</strong><br>
+          Our backend server processes the query in real-time memory:
+          <ul>
+            <li>It consults internal, offline reference knowledge (such as TCM herbs, seasonal foods, and acupressure points).</li>
+            <li>It runs safety checks (e.g., preventing specific medical dosing guidance and redirecting acute symptoms to medical care).</li>
+            <li><strong>No database logging:</strong> The Android backend API does <em>not</em> write your chat transcript to Firestore, SQL, or any external database. Data exists in server RAM only for the seconds needed to handle the request.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <strong>AI Generation (Groq Cloud — United States)</strong><br>
+          To generate natural conversational language, the backend forwards the prompt to Groq's API. Groq processes the text to formulate the response under its commercial privacy terms and does not use API inputs to train foundation AI models.
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <strong>Response Returned to Your Phone</strong><br>
+          The generated answer travels back over HTTPS to your Android app and appears on your screen. The conversation is appended to your local device storage so you can read it later.
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <strong>Marketing Website & Privacy Policy Hosting (Cloudflare Pages)</strong><br>
+          Our informational website (including this policy page) is delivered via Cloudflare Pages. Cloudflare serves static web files and has no role in processing chat messages or AI queries.
+        </div>
+      </div>
+    </div>
+
+    <h2>5. Third-Party Services and Educational Sources</h2>
+    <p>
+      We maintain relationships with a minimal set of trusted technical infrastructure providers:
+    </p>
+    <ul>
+      <li>
+        <strong>Groq Inc. (United States):</strong> Provides secure high-speed AI inference for language processing. Chat messages are processed to generate answers in accordance with the <a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener noreferrer">Groq Privacy Policy</a>. Groq does not use customer API inputs to train models.
+      </li>
+      <li>
+        <strong>PT Cloud Hosting Indonesia / IDCloudHost (Jakarta, Indonesia):</strong> Hosts our Android backend API server. Requests are handled ephemerally; chat transcripts are not written to a database.
+      </li>
+      <li>
+        <strong>Cloudflare (United States & global CDN):</strong> Serves static assets for the website and privacy documentation, providing DDoS protection and SSL/TLS encryption.
+      </li>
+      <li>
+        <strong>Educational References (MSK About Herbs, TCM Wiki, WHO Publications):</strong> Our backend includes curated knowledge derived from public health publications and herbal databases. <em>Your questions are never sent to these third-party reference websites.</em>
+      </li>
+    </ul>
+
+    <p>
+      <em>Note regarding our web demo:</em> If you also use the separate experimental browser demo hosted at Streamlit Cloud, that web demo records limited non-identifying operational and safety-event flags to Google Firebase/Firestore. <strong>The Android app does not use Firestore or record chat data to it.</strong>
+    </p>
+
+    <h2>6. Data Retention Policy</h2>
+    <p>
+      In accordance with Google Play developer guidelines, we maintain the following data retention practices:
+    </p>
+    <ul>
+      <li>
+        <strong>On your Android device:</strong> Your chat messages and chosen language preference remain stored locally on your device until you manually clear app data or uninstall the app.
+      </li>
+      <li>
+        <strong>On the NutriBot Android backend:</strong> We do <strong>not</strong> retain conversation transcripts in a database. Chat text is discarded from server memory immediately after the response is returned to your device.
+      </li>
+      <li>
+        Server-side security logs may be retained temporarily for operational and security purposes. We do not use these logs to identify individual users.
+      </li>
+      <li>
+        <strong>Third-party AI infrastructure (Groq):</strong> Ephemeral processing logs are managed under Groq's standard commercial API retention rules for security and abuse detection, and are not retained long-term or used for model training.
+      </li>
+    </ul>
+
+    <h2>7. Data Deletion Policy (How to Delete Your Data)</h2>
+    <p>
+      Google Play requires apps to provide users with a clear, accessible path to delete their data. Because your conversation history is kept on your device, you have complete control over deleting it at any time:
+    </p>
+
+    <h3>Method 1: Clear data through Android Settings (Instant)</h3>
+    <ol>
+      <li>Open your phone's <strong>Settings</strong> app.</li>
+      <li>Go to <strong>Apps</strong> (or <strong>Apps &amp; Notifications</strong> &rarr; <strong>See all apps</strong>).</li>
+      <li>Select <strong>NutriBot</strong>.</li>
+      <li>Tap <strong>Storage &amp; cache</strong> (or <strong>Storage</strong>).</li>
+      <li>Tap <strong>Clear storage</strong> (or <strong>Clear data</strong>) and confirm.</li>
+    </ol>
+    <p>
+      This immediately and permanently erases all stored conversation histories, cached files, and local settings from your phone.
+    </p>
+
+    <h3>Method 2: Uninstall the NutriBot app</h3>
+    <p>
+      Uninstalling NutriBot from your Android device automatically deletes all local app sandbox data, including all chat history and preferences.
+    </p>
+
+    <h3>Method 3: Deletion requests and inquiries</h3>
+    <p>
+      Because our Android backend does not maintain user accounts or persistent database records of your chat transcripts, there is no server-side user profile for us to manually purge. However, if you have questions about data deletion or wish to verify your data status, you can contact our privacy contact at <a href="mailto:cs@ainutribot.com">cs@ainutribot.com</a>. We respond to all inquiries within 30 calendar days.
+    </p>
+
+    <h2>8. What We Never Do</h2>
+    <p>
+      To ensure user trust and align with Google Play's strictest standards:
+    </p>
+    <ul>
+      <li>We do <strong>not</strong> sell, rent, or trade your personal or health information to anyone under any circumstances.</li>
+      <li>We do <strong>not</strong> display third-party advertisements within the app.</li>
+      <li>We do <strong>not</strong> bundle third-party ad networks or analytics brokers.</li>
+      <li>We do <strong>not</strong> track you across other applications, browsers, or physical locations.</li>
+      <li>We do <strong>not</strong> share your chat inputs with insurance companies, employers, or marketing firms.</li>
+    </ul>
+
+    <h2>9. Medical Disclaimer (Important Health Notice)</h2>
+    <p>
+      <strong>Please read this carefully before using NutriBot:</strong>
+    </p>
+    <ul>
+      <li>
+        <strong>Educational Information Only:</strong> All content provided by NutriBot — including herbal properties, traditional food energetics, acupressure guides, and lifestyle tips — is for educational, cultural, and informational purposes only.
+      </li>
+      <li>
+        <strong>Not Medical Advice:</strong> NutriBot does not offer clinical medical advice, professional diagnoses, or personalized treatment plans. NutriBot cannot replace a physical examination, consultation, or prescription from a licensed healthcare professional.
+      </li>
+      <li>
+        <strong>Herbal &amp; Medication Safety:</strong> Herbs and supplements can interact with prescription pharmaceuticals, pregnancy, nursing, or pre-existing health conditions. Always consult your doctor, pharmacist, or licensed TCM practitioner before starting or changing any herbal regimen.
+      </li>
+      <li>
+        <strong>Emergencies:</strong> If you believe you may have a medical emergency, call your local emergency phone number (such as 911, 112, or 119) or go to the nearest hospital emergency room immediately.
+      </li>
+    </ul>
+
+    <h2>10. Children's Privacy</h2>
+    <p>
+      NutriBot is intended for general audiences aged 18 and older. We do not intentionally market to, collect, or solicit personal data from children under 18 (or under 13 where specified by local law). If we become aware that an underage user has provided personal data, we will take immediate steps to delete any associated information. Parents or guardians with concerns may contact <a href="mailto:cs@ainutribot.com">cs@ainutribot.com</a>.
+    </p>
+
+    <h2>11. Security Measures</h2>
+    <p>
+      We use appropriate technical safeguards to protect information:
+    </p>
+    <ul>
+      <li><strong>Encryption in Transit:</strong> All communications between the NutriBot Android application, our IDCloudHost backend, and Groq are encrypted using TLS/HTTPS protocols.</li>
+      <li><strong>Android Sandbox:</strong> Local chat data is confined to the application's isolated sandbox storage, preventing unauthorized access from other apps installed on the user's phone.</li>
+      <li><strong>Access Controls &amp; Rate Limiting:</strong> Our backend incorporates rate limiting, input size constraints, and firewall rules to protect against unauthorized access and abuse.</li>
+    </ul>
+
+    <h2>12. Changes to This Privacy Policy</h2>
+    <p>
+      We may occasionally update this Privacy Policy to reflect improvements to our app, changes in technology, or evolving legal requirements.
+    </p>
+    <p>
+      Any modifications will be posted directly to this URL, and the "Last Updated" date at the top of the page will be revised accordingly. We encourage you to review this page periodically when using NutriBot.
+    </p>
+
+    <h2>13. Contact Us</h2>
+    <p>
+      If you have questions, comments, or concerns about this Privacy Policy, your data, or our privacy practices, please contact us:
+    </p>
+    <ul>
+      <li><strong>Privacy Officer Email:</strong> <a href="mailto:cs@ainutribot.com">cs@ainutribot.com</a></li>
+      <li><strong>General Inquiries:</strong> <a href="mailto:hello@ainutribot.com">hello@ainutribot.com</a></li>
+      <li><strong>Website:</strong> <a href="https://ainutribot.com">https://ainutribot.com</a></li>
+      <li><strong>Website General Privacy Policy:</strong> <a href="privacy.html">nutribot_website Privacy Policy</a></li>
+    </ul>
+    <p>
+      We are committed to addressing your privacy inquiries swiftly and transparently.
+    </p>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">NutriBot</span>
+      <p>AI-powered nutrigenomic guidance and traditional wellness education for everyday health.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="pricing_1.html">Pricing</a>
+      <a href="x5-pro.html">X5-Pro</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Website Privacy</a>
+      <a href="privacy-android.html">Android Privacy</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 NutriBot. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
